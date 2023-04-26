@@ -1,0 +1,11 @@
+<div *ngFor="let form of forms">
+    <h3>{{form.name}}</h3>
+    <p>{{form.description}}</p>
+    <ul>
+      <li *ngFor="let field of form.fields">
+        <label>{{field.name}}</label>
+        <input [type]="field.dataType" [required]="field.required" />
+      </li>
+    </ul>
+  </div>
+  
